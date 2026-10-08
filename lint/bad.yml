@@ -1,0 +1,10 @@
+when:
+  - event: manual
+
+priority: 42
+
+steps:
+  run:
+    image: alpine
+    commands:
+      - echo bad

@@ -1,0 +1,10 @@
+when:
+  - event: manual
+
+priority: 5
+
+steps:
+  run:
+    image: alpine
+    commands:
+      - echo ok
