@@ -1,0 +1,23 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: cpu
+
+depends_on:
+  - z
+
+concurrency:
+  limit: 1
+  group: g4
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "a start"
+      - Start-Sleep -Seconds 10
+      - Write-Output "a done"
