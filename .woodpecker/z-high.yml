@@ -1,0 +1,22 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: cpu
+
+priority: 9
+
+concurrency:
+  limit: 1
+  group: g3
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "z-high start"
+      - Start-Sleep -Seconds 10
+      - Write-Output "z-high done"

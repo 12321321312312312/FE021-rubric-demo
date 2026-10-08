@@ -1,0 +1,22 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: cpu
+
+priority: 0
+
+concurrency:
+  limit: 1
+  group: g3
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "a-low start"
+      - Start-Sleep -Seconds 10
+      - Write-Output "a-low done"
