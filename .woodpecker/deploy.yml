@@ -1,0 +1,23 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: cpu
+
+depends_on:
+  - build
+
+concurrency:
+  limit: 2
+  group: g2
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "deploy start"
+      - Start-Sleep -Seconds 10
+      - Write-Output "deploy done"
