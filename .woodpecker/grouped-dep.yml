@@ -1,0 +1,23 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: cpu
+
+depends_on:
+  - build
+
+concurrency:
+  limit: 1
+  group: g
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "grouped-dep start"
+      - Start-Sleep -Seconds 10
+      - Write-Output "grouped-dep done"
