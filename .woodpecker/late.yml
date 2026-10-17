@@ -1,0 +1,22 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: cpu
+
+priority: 9
+
+concurrency:
+  limit: 1
+  group: g1
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "late start"
+      - Start-Sleep -Seconds 5
+      - Write-Output "late done"
