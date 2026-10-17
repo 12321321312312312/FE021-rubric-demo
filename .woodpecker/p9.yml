@@ -1,0 +1,18 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: cpu
+
+priority: 9
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "p9 start"
+      - Start-Sleep -Seconds 3
+      - Write-Output "p9 done"
