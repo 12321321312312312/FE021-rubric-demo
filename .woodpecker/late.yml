@@ -1,0 +1,19 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: cpu
+
+depends_on:
+  - dep
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "late start"
+      - Start-Sleep -Seconds 3
+      - Write-Output "late done"
