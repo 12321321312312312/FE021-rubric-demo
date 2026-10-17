@@ -1,0 +1,16 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: gpu
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "job start"
+      - Start-Sleep -Seconds 10
+      - Write-Output "job done"
