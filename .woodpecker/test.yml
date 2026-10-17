@@ -1,0 +1,21 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: cpu
+
+priority: 9
+
+depends_on:
+  - build
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "test start"
+      - Start-Sleep -Seconds 10
+      - Write-Output "test done"

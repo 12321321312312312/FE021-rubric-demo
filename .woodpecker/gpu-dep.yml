@@ -1,0 +1,19 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: gpu
+
+depends_on:
+  - build
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "gpu-dep start"
+      - Start-Sleep -Seconds 10
+      - Write-Output "gpu-dep done"
