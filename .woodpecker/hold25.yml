@@ -1,0 +1,16 @@
+when:
+  - event: manual
+
+skip_clone: true
+
+labels:
+  demo: c3
+  kind: cpu
+
+steps:
+  run:
+    image: pwsh
+    commands:
+      - Write-Output "hold25 start"
+      - Start-Sleep -Seconds 25
+      - Write-Output "hold25 done"
