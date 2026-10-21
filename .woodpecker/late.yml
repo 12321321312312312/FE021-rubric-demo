@@ -6,6 +6,9 @@ skip_clone: true
 labels:
   demo: c3
   kind: cpu
+  
+depends_on:
+  - dep
 
 steps:
   run:
