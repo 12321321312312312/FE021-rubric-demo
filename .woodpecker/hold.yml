@@ -12,5 +12,5 @@ steps:
     image: pwsh
     commands:
       - Write-Output "hold start"
-      - Start-Sleep -Seconds 15
+      - Start-Sleep -Seconds 25
       - Write-Output "hold done"
