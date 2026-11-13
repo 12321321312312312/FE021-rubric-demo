@@ -16,5 +16,5 @@ steps:
     image: pwsh
     commands:
       - Write-Output "occ start"
-      - Start-Sleep -Seconds 30
+      - Start-Sleep -Seconds 40
       - Write-Output "occ done"
